@@ -18,7 +18,7 @@ public class Person {
     private String lastname;
     private String name;
     private String surname;
-    private String birthday;
+    private Date birthday;
 
 
 }
