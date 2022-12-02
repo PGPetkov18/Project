@@ -1,15 +1,11 @@
 package com.example.project.controller;
 
-import com.example.project.Service.PersonService;
-import com.example.project.domain.Person;
+import com.example.project.service.PersonService;
+import com.example.project.model.Person;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-
-
-
-import java.util.Optional;
 
 @Controller
 @RequestMapping("/person")

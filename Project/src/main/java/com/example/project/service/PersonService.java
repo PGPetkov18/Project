@@ -1,6 +1,6 @@
-package com.example.project.Service;
+package com.example.project.service;
 
-import com.example.project.domain.Person;
+import com.example.project.model.Person;
 import com.example.project.repository.PersonRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
