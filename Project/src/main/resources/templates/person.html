@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+  <link href="/css/form.css" rel="stylesheet">
+  <link href="/css/table.css" rel="stylesheet">
+    <title>Person</title>
+</head>
+<body>
+<form method="post" acction="/person" th:object="${person}">
+  <input placeholder="Familia" type="text"  th:field="*{lastname}"><br>
+  <input placeholder="Ime" type="text"  th:field="*{name}"><br>
+  <input placeholder="Prez ime" type="text"  th:field="*{surname}"><br>
+  <input placeholder="Rojdenna data" type="text"  th:field="*{birthday}"><br>
+  <input type="submit" value="Izprati">
+</form>
+
+<table id="customers">
+  <tr>
+    <th>Familia</th>
+    <th>Ime</th>
+    <th>Prez ime</th>
+    <th>Rojdenna data</th>
+    <th>Iztrii</th>
+  </tr>
+  <tr th:each="p: ${persons}">
+  <td th:text="${p.lastname}">
+  <td th:text="${p.name}">
+  <td th:text="${p.surname}">
+  <td th:text="${p.birthday}">
+  <td><a th:href="@{person/del(id=${p.id})}"><img src="/img/index.png" width="32" height="32"></a></td>
+</tr>
+</table>
+</body>
+</html>
